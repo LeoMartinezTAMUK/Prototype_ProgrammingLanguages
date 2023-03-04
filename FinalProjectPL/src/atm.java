@@ -60,7 +60,7 @@ public void setMobile(String prevMobileNo, String newMobileNo) {
     }
 }
 
-public void cashWithdraw(int amount) {
+public void cashWithdraw(double amount) {
     if (amount > 0 && amount < balance) {
         balance -= amount;
         System.out.println("\nPlease Collect Your Cash");
