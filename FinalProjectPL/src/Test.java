@@ -23,7 +23,7 @@ public class Test {
 
 			    if (enterAccountNo == user1.getAccountNo() && enterPin == user1.getPin()) {
 			        do {
-			            int amount = 0;
+			            double amount = 0;
 			            //String oldMobileNo, newMobileNo;
 			            //char menu;
 
@@ -52,7 +52,7 @@ public class Test {
 			                    clearScreen();
 			                    System.out.println("**** Cash Withdrawal ****");
 			                    System.out.print("\nEnter the amount: ");
-			                    amount = scanner.nextInt();
+			                    amount = scanner.nextDouble();
 			                    user1.cashWithdraw(amount);
 			                    System.out.print("\nPress ENTER for Main Menu");
 			                    scanner.nextLine();
