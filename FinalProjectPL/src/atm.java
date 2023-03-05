@@ -6,8 +6,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
 Final Project Prototype/Template Programming Languages CSEN 4366
 Group 1: Leo Martinez III, Jalen Williams, Amelia Trevino	*/
 
-// *** case 4 of Test.java needs to be revised ***
-
 /* ATM
 -> Check Balance
 -> Cash withdraw
