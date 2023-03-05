@@ -1,6 +1,3 @@
-
-// *** case 4 of Test.java needs to be revised ***
-
 import java.util.Scanner;
 
 public class Test {
@@ -30,7 +27,6 @@ public class Test {
 				        do {
 				            double amount = 0;
 				            long prevMobileNo, newMobileNo;
-				            //char menu;
 
 				            clearScreen();
 
@@ -118,9 +114,7 @@ public class Test {
 				    }
 				}
 			}
-		
-    
-
+    // clear screen in Java
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
