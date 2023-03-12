@@ -42,7 +42,7 @@ public class atmFunc {
     }
 
     public void updateMobileNo(String prevMobileNo, String newMobileNo) {
-            user.setMobile(prevMobileNo, newMobileNo);
+        user.setMobile(prevMobileNo, newMobileNo);
         System.out.print("\nPress ENTER for Main Menu");
     }
 
