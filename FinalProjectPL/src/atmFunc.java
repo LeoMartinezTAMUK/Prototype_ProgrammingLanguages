@@ -16,30 +16,36 @@ public class atmFunc {
     }
     public void checkBalance() {
         System.out.println("**** Check Balance ****");
-        System.out.println("\nYour Bank balance is: $" + user.getBalance());
+        System.out.printf("\nYour Bank balance is: $%.2f\n", user.getBalance());
         System.out.print("\nPress ENTER for Main Menu");
     }
 
     public void cashWithdraw(double amount) {
-        user.cashWithdraw(amount);
-        System.out.println("You have withdrawn $" + amount + ". Your new balance is: $" + user.getBalance());
+        if (amount > user.getBalance()) {
+            System.out.printf("Error: Insufficient funds. Cannot withdraw $%.2f\n", amount);
+        } else {
+            user.setCashWithdraw(amount);
+            System.out.printf("You have withdrawn $%.2f\n", amount);
+            System.out.printf("Your new balance is: $%.2f\n", user.getBalance());
+        }
         System.out.print("\nPress ENTER for Main Menu");
     }
+
 
     public void showUserDetails() {
         System.out.println("**** User Details ****");
         System.out.println("\n-> Account No: " + user.getAccountNo());
         System.out.println("\n-> Name: " + user.getName());
-        System.out.println("\n-> Balance: $" + user.getBalance());
+        System.out.printf("\n-> Balance: $%.2f\n", user.getBalance());
         System.out.println("\n-> Mobile No.: " + user.getMobileNo());
         System.out.print("\nPress ENTER for Main Menu");
     }
 
-    public void updateMobileNo(long prevMobileNo, long newMobileNo) {
-        user.setMobile(prevMobileNo, newMobileNo);
-        System.out.println("Your new mobile number is: " + user.getMobileNo());
+    public void updateMobileNo(String prevMobileNo, String newMobileNo) {
+            user.setMobile(prevMobileNo, newMobileNo);
         System.out.print("\nPress ENTER for Main Menu");
     }
+
     
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
