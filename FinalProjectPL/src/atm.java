@@ -6,13 +6,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
 Final Project Prototype/Template Programming Languages CSEN 4366
 Group 1: Leo Martinez III, Jalen Williams, Amelia Trevino	*/
 
-/* ATM
--> Check Balance
--> Cash withdraw
--> User Details
--> Update Mobile No.
-*/
-
 class atm {
 private long accountNo;
 private String name;
@@ -20,8 +13,7 @@ private int pin;
 private double balance;
 private long mobileNo;
 
-//
-public void setData(long accountNo, String name, int pin, double balance, long mobileNo) {
+public atm(long accountNo, String name, int pin, double balance, long mobileNo) {
     this.accountNo = accountNo;
     this.name = name;
     this.pin = pin;
@@ -66,7 +58,5 @@ public void cashWithdraw(double amount) {
     } else {
         System.out.println("\nInvalid Input or Insufficient Balance");
     }
-}
-
-//
+  }
 }
