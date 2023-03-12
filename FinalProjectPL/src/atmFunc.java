@@ -5,7 +5,7 @@ public class atmFunc {
         this.user = user;
     }
 
-    public void menu() {
+    public void menu() { // Displays the main menu of the ATM
     	System.out.println("\n**** Welcome to the ATM ****");
         System.out.println("\nSelect Options");
         System.out.println("1. Check Balance");
@@ -14,25 +14,25 @@ public class atmFunc {
         System.out.println("4. Update Mobile Number");
         System.out.println("5. Exit");
     }
-    public void checkBalance() {
+    public void checkBalance() { // Displays the available balance of a user
         System.out.println("**** Check Balance ****");
         System.out.printf("\nYour Bank balance is: $%.2f\n", user.getBalance());
         System.out.print("\nPress ENTER for Main Menu");
     }
 
-    public void cashWithdraw(double amount) {
-        if (amount > user.getBalance()) {
-            System.out.printf("Error: Insufficient funds. Cannot withdraw $%.2f\n", amount);
+    public void cashWithdraw(double withdrawAmount) { // Checks if the user's balance is more than the withdraw
+        if (withdrawAmount > user.getBalance()) {
+            System.out.printf("Error: Insufficient funds. Cannot withdraw $%.2f\n", withdrawAmount);
         } else {
-            user.setCashWithdraw(amount);
-            System.out.printf("You have withdrawn $%.2f\n", amount);
+            user.setCashWithdraw(withdrawAmount);
+            System.out.printf("You have withdrawn $%.2f\n", withdrawAmount);
             System.out.printf("Your new balance is: $%.2f\n", user.getBalance());
         }
         System.out.print("\nPress ENTER for Main Menu");
     }
 
 
-    public void showUserDetails() {
+    public void showUserDetails() { // Displays basic information of the user
         System.out.println("**** User Details ****");
         System.out.println("\n-> Account No: " + user.getAccountNo());
         System.out.println("\n-> Name: " + user.getName());
@@ -41,13 +41,13 @@ public class atmFunc {
         System.out.print("\nPress ENTER for Main Menu");
     }
 
-    public void updateMobileNo(String prevMobileNo, String newMobileNo) {
+    public void updateMobileNo(String prevMobileNo, String newMobileNo) { // Allows the user to update their phone number
         user.setMobile(prevMobileNo, newMobileNo);
         System.out.print("\nPress ENTER for Main Menu");
     }
 
     
-    public static void clearScreen() {
+    public static void clearScreen() { // Function to clear screen in Java
         System.out.print("\033[H\033[2J");
         System.out.flush();}
 }

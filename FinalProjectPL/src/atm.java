@@ -13,6 +13,7 @@ private int pin;
 private double balance;
 private String mobileNo;
 
+// Constructor to initialize the user values
 public atm(long accountNo, String name, int pin, double balance, String mobileNo) {
     this.accountNo = accountNo;
     this.name = name;
@@ -41,6 +42,7 @@ public String getMobileNo() {
     return mobileNo;
 }
 
+// Necessary in order to update the user's phone number by verifying if the old number matches
 public void setMobile(String prevMobileNo, String newMobileNo) {
     if (prevMobileNo.equals(mobileNo)) {
     	mobileNo = newMobileNo;
@@ -51,12 +53,11 @@ public void setMobile(String prevMobileNo, String newMobileNo) {
     }
 }
 
-public void setCashWithdraw(double amount) {
-    if (amount > 0 && amount <= balance) {
-        balance -= amount;
+// Necessary in order to update the user's balance based on how much they withdraw
+public void setCashWithdraw(double withdrawAmount) {
+    if (withdrawAmount > 0 && withdrawAmount <= balance) {
+        balance -= withdrawAmount;
         System.out.println("\nPlease Collect Your Cash\n");
-    } else {
-        System.out.println("\nInvalid Input or Insufficient Balance");
-    }
-  }
+    	}
+	}
 }
