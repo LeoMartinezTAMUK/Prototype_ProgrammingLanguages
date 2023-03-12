@@ -59,5 +59,5 @@ public void setCashWithdraw(double withdrawAmount) {
         balance -= withdrawAmount;
         System.out.println("\nPlease Collect Your Cash\n");
     	}
-	}
+     }
 }
